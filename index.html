@@ -2,9 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Bonnier Task</title>
   </head>
   <body>
+    <h1>Bonnier metadata</h1>
+    <div id="listings"></div>
+
+    <script>
+
+
+
+    fetch('https://tv4-graphql-prod.herokuapp.com/graphql?query={newsPlayer%20{assets%20{%20id%20program_nid%20description}}}')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (json) {
+                    displayListings(json.data)
+                });
+        })
+        
+    </script>
 
   </body>
 </html>
