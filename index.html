@@ -22,6 +22,9 @@
               });
           }
 
+          displayElement.addEventListener('click', event => {
+              alert(`You clicked on ${event.target.parentElement.dataset.id}`)
+          }) //This is in preperation to render player with correct assetid
 
         fetch('https://tv4-graphql-prod.herokuapp.com/graphql?query={newsPlayer%20{assets%20{%20id%20program_nid%20description}}}')
           .then(function (response) {
