@@ -12,7 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   //This is in preperation to render player with correct assetid
   displayElement.addEventListener('click', event => {
-      alert(`You clicked on ${event.target.parentElement.dataset.id}`)
+    fetch(`https://playback-api.b17g.net/media/${event.target.parentElement.dataset.id}?service=tv4&device=browser&protocol=hls&is_drm=false`)
+        .then(function(response) {
+          return response.json();
+        })
+        .then(function(myJson) {
+          console.log(myJson);
+        });
   })
 
 fetch('https://tv4-graphql-prod.herokuapp.com/graphql?query={newsPlayer%20{assets%20{%20id%20program_nid%20description}}}')
