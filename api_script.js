@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       listings.forEach(listing => {
           let el = document.createElement('div')
           el.dataset.id = listing.id
+          el.url = listing.manifestUrl
           el.innerHTML = `<h1>${listing.program_nid}</h1><p>${listing.description}</p>`
           displayElement.appendChild(el)
       });
