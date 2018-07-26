@@ -1,0 +1,23 @@
+{
+  "name": "bonnier_task",
+  "version": "1.0.0",
+  "description": "This will currently display the asset metadata (title and description). If Program title is clicked an alert will pop up saying \"you have clicked {assedid}\"",
+  "main": "api_script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgeJLewis/bonnie_task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgeJLewis/bonnie_task/issues"
+  },
+  "homepage": "https://github.com/GeorgeJLewis/bonnie_task#readme",
+  "devDependencies": {
+    "jest": "^23.4.1"
+  }
+}
